@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Code Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO7wU1fpm1Bc5hkpxeIKaxzdPnEospECo&libraries=places" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1 class="title capitalise">About You</h1>
+
+    <form class="about-form" action="" method="">
+      <div id="line1" class="input">
+        <h3>My name is</h3>
+        <input type="text" class="capitalise name" placeholder="Name" name="name">
+        <span class="error"></span>
+      </div>
+
+      <div class="input">
+        <h3>and I am</h3>
+        <input type="number" min="0" max="117" placeholder="Age" name="age">
+        <span class="error"></span>
+      </div>
+
+      <div class="input">
+        <h3>I live in</h3>
+        <input type="text" class="capitalise" id="location" placeholder="Location" name="location">
+        <span class="error"></span>
+      </div>
+
+      <div class="input select-rent">
+        <h3>which I</h3><br/>
+        <button class="disable" onClick="document.getElementById('home').value='own'">own</button>
+        <button class="disable" onClick="document.getElementById('home').value='rent'">rent</button>
+        <button class="disable" onClick="document.getElementById('home').value='free'">stay for free</button>
+
+        <select id="home" name="home-style" style="display: none">
+          <option value="own"></option>
+          <option value="rent"></option>
+          <option value="free"></option>
+        </select>
+      </div>
+
+      <div class="input rent">
+        <h3>and my rent is</h3>
+        <input type="number" class="large-number" placeholder="£..." name="rent-price">
+      </div>
+
+      <div class="input select-employment">
+        <h3>I am currently</h3><br/>
+        <button class="disable" onClick="document.getElementById('employment').value='employed'">employed</button>
+        <button class="disable" onClick="document.getElementById('employment').value='unemployed'">unemployed</button>
+        <button class="disable" onClick="document.getElementById('employment').value='student'">student</button>
+
+        <select id="employment" name="employment-status" style="display: none">
+          <option value="employed"></option>
+          <option value="unemployed"></option>
+          <option value="student"></option>
+        </select>
+      </div>
+
+      <div class="input employment">
+        <h3>earning</h3>
+        <input type="number" class="large-number" placeholder="£..." name="earnings">
+        <h3>per annum</h3>
+      </div>
+
+      <div class="input employment">
+        <h3>and working as</h3>
+        <input class="capitalise" type="text" placeholder="Job Title" name="occupation">
+      </div>
+
+      <div class="input">
+        <input id="submit" class="disable" type="submit" value="Submit">
+      </div>
+
+    </form>
+  </body>
+</html>
